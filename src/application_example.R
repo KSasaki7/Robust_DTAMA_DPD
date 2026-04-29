@@ -21,7 +21,7 @@ set.seed(1234)
 ## 8 studies for diagnosis of conversion from MCI to ADD
 dat = read.csv(file.path(path_dat,"MMSE.csv"))
 
-# existing method (Binomial-Normal model with REML)
+# existing method (Bivariate Normal-Normal model with REML)
 res_bnn = fit_bnn(Data = dat, method = "reml") 
 
 # proposed method with alpha selected by the data-adaptive criterion based on the Hyvarinen score (alpha_H)
